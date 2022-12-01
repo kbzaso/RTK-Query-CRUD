@@ -8,13 +8,14 @@ function TaskForm(){
         const name = e.target.elements.name.value;
         const description = e.target.elements.description.value;
         const completed = e.target.elements.completed.checked;
+        document.getElementById('form').reset()
 
         createTask({
             name, description, completed
         })
     }
     return(
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" id="form" onSubmit={handleSubmit}>
             <input type="text" name="name" />
             <input type="text" name="description" />
             <input type="checkbox" name="completed" />
